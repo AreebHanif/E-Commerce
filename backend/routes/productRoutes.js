@@ -9,7 +9,8 @@ import {
     fetchAllProducts,
     addProductReview,
     fetchTopProducts,
-    fetchNewProducts
+    fetchNewProducts,
+    filteredProducts
 } from "../controllers/productControllers.js"
 
 const router = express.Router()
@@ -41,5 +42,7 @@ router
     .get(fetchProductById)
     .put(authneticate, authorizeAdmin, formidable(), updateProductDetails)
     .delete(authneticate, authorizeAdmin, removeProduct)
+
+router.route('/filtered-products').post(filteredProducts)
 
 export default router

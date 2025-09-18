@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query/react';
 import { apiSlice } from './Api/apiSlice';
+import { getFavoriteFromLocalStorage } from "../Utils/localStorage"
 import authReducer from './features/auth/authSlice';
 import favoriteReducer from "../redux/favorite/favoriteSlice";
-import { getFavoriteFromLocalStorage } from "../Utils/localStorage"
 import cartSliceReducer from "../redux/features/cart/cartSlice"
 import shopReducer from "../redux/features/shop/shopSlice"
 
